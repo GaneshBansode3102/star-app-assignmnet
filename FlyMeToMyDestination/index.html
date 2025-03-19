@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly Me to My Destination ✈️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fly Me to My Destination ✈️</h1>
+        <p>Find the minimum planes required to reach your destination.</p>
+
+        <div class="input-container">
+            <label for="fuelInput">Enter Fuel Array (comma-separated):</label>
+            <input type="text" id="fuelInput" placeholder="e.g., 1,6,3,4,5,0,0,0,6">
+        </div>
+
+        <button class="calculate-btn" onclick="calculateMinPlanes()">Find Minimum Planes</button>
+
+        <div class="result-box">
+            <h3>Result: <span id="result">-</span></h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

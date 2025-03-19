@@ -1,0 +1,202 @@
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        transition: background 0.5s ease-in-out;
+    }
+
+    /* Main Container */
+    .customizer-container {
+        display: flex;
+        width: 80%;
+        height: 80vh;
+        padding: 20px;
+        border-radius: 10px;
+        transition: background 0.5s ease-in-out;
+    }
+
+    /* Umbrella Section (Left Side) */
+    .umbrella-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    #umbrella {
+        width: 80%;
+        max-width: 400px;
+    }
+
+    /* Logo Preview */
+    #logo-preview {
+        position: absolute;
+        bottom: 10%;
+        width: 80px;
+        height: auto;
+    }
+
+    /* Loader */
+    #loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        /* Adjust size as needed */
+        height: auto;
+    }
+
+    /* #loader img {
+        width: 100%;
+        height: auto;
+    }
+     */
+
+
+    #loader img {
+        width: 100%;
+        height: auto;
+        filter: var(--spinner-color);
+    }
+
+    :root {
+        --spinner-color: invert(18%) sepia(77%) saturate(1000%) hue-rotate(300deg);
+    }
+
+
+    .hidden {
+        display: none;
+    }
+
+    /* Controls Section (Right Side) */
+    .controls {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Upload Section */
+    .upload-section {
+        margin-bottom: 20px;
+    }
+
+    .upload-btn {
+        display: inline-flex;
+        align-items: center;
+        background: #ffcccc;
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .upload-btn img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    /* Hide File Input */
+    #upload-logo {
+        display: none;
+    }
+
+    /* Color Buttons */
+    .color-options {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .color-btn {
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .color-btn:hover {
+        transform: scale(1.1);
+    }
+
+    /* Define Colors */
+    .pink {
+        background: #ff6699;
+    }
+
+    .blue {
+        background: #3399ff;
+    }
+
+    .yellow {
+        background: #ffcc00;
+    }
+
+    /* Highlight the selected color button */
+    .selected {
+        border: 2px solid var(--border-color);
+        /* Dynamic border color */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        /* Soft black glow */
+        transform: scale(1.1);
+        /* Slightly enlarge the selected button */
+        position: relative;
+    }
+
+    /* Dynamic Colored Outline */
+    .selected::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border: 2px solid var(--border-color);
+        /* Dynamic border color */
+        border-radius: 50%;
+        /* Circular shape */
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        /* Black shadow */
+    }
+
+
+
+    /* Loader Spin Animation */
+    .spin {
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    /* Logo Preview (Inside Umbrella) */
+    #logo-preview {
+        position: absolute;
+        bottom: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: auto;
+        z-index: 2;
+        /* Ensure it stays above the umbrella */
+    }
